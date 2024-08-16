@@ -192,6 +192,24 @@
         .fab:hover {
             background-color: #5a52d5;
         }
+        .explanation {
+            background-color: #fff; /* Light background */
+            color: #333; /* Dark text for contrast */
+            padding: 20px; /* Padding inside the box */
+            margin: 20px 0; /* Space above and below the box */
+            border: 1px solid #ddd; /* Subtle border */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            max-width: auto; /* Max width of the box */
+            margin-left: auto; /* Center the box horizontally */
+            margin-right: auto;
+        }
+
+        .explanation p {
+            font-family: 'Roboto', sans-serif; /* Change the font */
+            font-size: 18px; /* Larger font size */
+            line-height: 1.6; /* More space between lines */
+        }
 
         #chatbox {
             position: fixed;
@@ -257,6 +275,11 @@
     <div class="image-container">
         <img src="static\fraud_indicators.png" alt="Generated Plot" style="max-width: 100%; height: auto;">
     </div>
+    <div class="explanation">
+        <h1>Explanation</h1>
+        <p class="explanation" style="font-weight: bold;">{{ explanation }}</p>
+    </div>
+
     <div class="result">
         <p class="model-name">Decision Tree:</p>
         <p class="dt-percentage">{{ results['Decision Tree']|round(2) }}%</p>
